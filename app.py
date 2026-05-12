@@ -235,7 +235,7 @@ def analyze_document(comments, user_analysis_prompt):
 st.title("AI Feedback Document Orchestrator")
 
 st.write(
-    "Upload feedback documents and analyze sentiments automatically using OpenRouter AI."
+    "Upload feedback documents and analyze sentiments."
 )
 
 st.divider()
@@ -246,7 +246,7 @@ st.divider()
 
 uploaded_file = st.file_uploader(
     "Upload Feedback Document",
-    type=["csv", "txt", "pdf"]
+    type=["txt", "pdf"]
 )
 
 user_email = st.text_input(
@@ -605,7 +605,7 @@ if analyze_btn:
             "email": user_email,
 
             "complaint_percentage":
-            complaint_percentage,
+            round(complaint_percentage, 2),
 
             "relevant_comments":
             total_comments,
