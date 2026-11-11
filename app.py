@@ -205,7 +205,8 @@ def analyze_document(comments, user_analysis_prompt):
         }
     ],
 
-    temperature=0
+    temperature=0,
+    max_tokens=4000
     )
 
     result = (
